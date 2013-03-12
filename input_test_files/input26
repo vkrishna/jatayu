@@ -1,0 +1,17 @@
+#comment
+# expected answer :  a'b' + c'(iterative consensus) 
+
+.i 3
+.ilb a b c 
+.o 1
+.ob F
+
+100 1
+010 1
+110 1
+00- 1
+011 0
+101 0
+111 0
+
+

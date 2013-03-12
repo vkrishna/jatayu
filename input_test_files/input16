@@ -1,0 +1,18 @@
+#comment
+#expected answer : bc + a'b + b'c' + a'c'
+
+.i 3
+.ilb a b c    
+.o 1
+.ob F
+
+-11 1
+01- 1
+-00 1
+111 1
+0-0 1
+001 0
+101 0
+110 0
+
+

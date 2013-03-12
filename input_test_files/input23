@@ -1,0 +1,18 @@
+#comment
+# expected answer : a'c' + b (quine mck after tab min) 
+
+.i 3
+.ilb a b c    
+.o 1
+.ob F
+
+000 1 
+001 0
+010 -
+011 -
+100 0
+101 0
+110 1
+111 -
+
+

@@ -1,0 +1,16 @@
+#comment
+# expected answer :  c'd + a'cd' + ad 
+
+.i 4
+.ilb a b c d   
+.o 1
+.ob F
+
+0-01 1
+0-10 1
+1--1 1
+--00 0
+0-11 0
+1-10 0
+
+

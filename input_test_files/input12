@@ -1,0 +1,14 @@
+#comment
+#expected answer : a'c' + bd
+
+.i 4
+.ilb a b c d  
+.o 1
+.ob F
+
+000- 1
+0101 1
+-111 1
+1110 1
+10-- 0
+0-10 0

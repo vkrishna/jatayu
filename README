@@ -1,0 +1,81 @@
+JATAYU Logic Minimization Tool
+By Venkata Krishna Nimmagadda & Vivek Tulsidas Bhat
+
+This README file gives a detailed explanation on how to use the JATAYU logic minimization 
+utility.
+
+Minimum System Requirements
+---------------------------
+1. GNU make 3.81 (or later) 
+2. gcc 4.4.1 (or later)
+
+The folder contains a Makefile for compilation and three folders : src, include, 
+input_test_files and doc. The 'src' folder contains all the C source files which implement 
+the JATAYU logic minimization tool. The 'include' folder contains the relevant header files 
+that are used for the implementation. The 'input_test_files' contains all the input test vectors 
+that we have used for testing out the performance of the JATAYU logic minimizer.
+
+Compilation
+-----------
+To compile the source code simply type 'make' on your terminal. An output file called 'logic_min'
+should be generated if the compilation is successful. 
+
+Using the logic_min executable
+------------------------------
+The logic_min executable can be used in one of three possible ways :
+
+1. It can be used to generate a verilog file that contains the behavioral modular
+   implementation of the optimized function. To do this, use the following command
+   on the terminal :
+
+   ./logic_min << path to your input file here >> -v << your desired output file name here >>
+
+   You do not need to add the '.v' extension to your output file name.
+
+2. It can also be used to generate a text file that contains the realization of the optimized function. 
+   To do this, use the following command on the terminal :
+
+   ./logic_min << path to your input file here >> -t << your desired output file name here >>
+
+   A .txt extension is automatically appended to your output file name.
+
+3. JATAYU uses the ESPRESSO EXPAND approach to arrive at the optimized function. You can obtain the 
+   optimized output by using the following command on the terminal : 
+
+   ./logic_min << path to your input file here >> -e << your desired output file name here >>
+
+   A .txt extension is automatically appended to your output file name.
+
+Input file specifications
+------------------------- 
+Input file specifications should conform to the sample input file example given below.
+
+Eg :
+
+# Your comments go here
+
+.i 2          #Number of input variables
+.ilb a b c d  #Input variables
+.o 1          #Number of output variables. JATAYU currently does not support multiple-output functions
+.ob F         #Output variable
+
+# Truth table goes here
+
+00 0
+01 1
+10 1
+11 0
+
+.e # Optional end of file indicator
+
+The output text file generated will also conform to the specifications indicated above.
+ 
+
+Implementation details
+----------------------
+To learn more about how JATAYU has been implemented, please refer to the documents provided in the 'doc'
+folder.
+
+
+Copyright(c) Venkata Krishna Nimmagadda, Vivek Tulsidas Bhat
+{vkn, vbhat@email.arizona.edu }

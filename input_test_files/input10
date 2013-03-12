@@ -1,0 +1,15 @@
+#comment
+#to test what program does for multi-output functions
+
+
+.i 4
+.ilb a b c d 
+.o 2
+.ob F
+
+100- 10
+1101 10
+-111 11
+0110 1-
+00-- 01
+-100 0-
